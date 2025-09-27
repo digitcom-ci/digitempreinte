@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DigitEmpreinte</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- HTML Header portion avec logo image -->
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="Logo Mon Agence" style="width:100px;height:auto;border-radius:8px;object-fit:cover">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta">
+      <button class="btn" onclick="location.href='#contact'">Demander un devis</button>
+      <button class="hamburger" id="hambBtn" aria-label="menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-nav container" id="mobileNav">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a>
+    <a href="services.html"><i class="fa-solid fa-gear"></i> Services</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+  </div>
+</header>
+
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="accueil" class="hero">
+    <div class="hero-img">
+    <img src="images/hero.jpg" alt="Image Hero" style="width:auto; border-top-left-radius:20px; border-top-right-radius:20px">
+    </div>
+    <div class="hero-inner">
+        <div style="flex:1">
+          <h1>Nous créons des marques numériques qui performent.</h1>
+          <p>Agence digitale spécialisée en communication, création de site et contenu. Stratégie, design, et exécution pour faire grandir votre audience.</p>
+          <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
+            <a class="btn" href="#services">Nos services</a>
+            <a class="muted" href="#lafabrik" style="text-decoration:underline;padding:8px">Voir nos réalisations</a>
+          </div>
+        </div>
+        <div style="width:320px">
+          <div class="card" style="padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));">
+            <div style="display:flex;gap:10px;align-items:center">
+              <div class="icon"><i class="fa-solid fa-user-check"></i></div>
+              <div class="card">
+                <div style="font-weight:700">Consultation gratuite</div>
+                <div class="muted" style="font-size:13px">30 minutes pour définir vos besoins</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A PROPOS -->
+    <section id="apropos">
+      <div class="container">
+        <div class="about">
+          <div>
+            <h2>À propos</h2>
+            <p class="muted">Nous révolutionnons la communication digitale. Volontairement multi-spécialiste, cela fait plus d'un an que nous accompagnons nos clients dans le développement de leur notoriété et de leur influence.
+            Chez DigitCom, nous croyons en l'impact de la technologie sur le monde des affaires. Nous créons des solutions digitales innovantes et personnalisées pour vous aider à atteindre vos objectifs. Notre expertise nous permet de propulser votre entreprise vers le succès digital.</p>
+            <ul style="margin-top:12px;list-style:none;padding:0">
+              <li class="muted"><i class="fa-solid fa-check" style="margin-right:8px;color:var(--accent)"></i> Identité de marque</li>
+              <li class="muted"><i class="fa-solid fa-check" style="margin-right:8px;color:var(--accent)"></i> Sites web & e‑commerce</li>
+              <li class="muted"><i class="fa-solid fa-check" style="margin-right:8px;color:var(--accent)"></i> Contenu & réseaux sociaux</li>
+            </ul>
+          </div>
+          <div>
+            <div class="card">
+              <h3>Notre méthode</h3>
+              <p class="muted">Audit, stratégie, exécution. Sprints brefs. Livrables concrets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="services-grid" style="margin-top:12px">
+
+              <article class="card">
+                  <div style="display:flex;gap:12px;align-items:center">
+                    <div class="icon"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <h3>Création de sites web</h3>
+                        <p class="muted">Conception et développement de sites vitrines et e-commerce performants et responsives.</p>
+                    </div>
+                  </div>
+              </article>
+
+              <article class="card">
+                  <div style="display:flex;gap:12px;align-items:center">
+                  <div class="icon"><i class="fa-solid fa-pen-nib"></i></div>
+                  <div>
+                      <h3>Création de contenu</h3>
+                      <p class="muted">Production de textes, visuels et vidéos adaptés pour attirer et engager votre audience.</p>
+                  </div>
+                  </div>
+              </article>
+
+              <article class="card">
+                  <div style="display:flex;gap:12px;align-items:center">
+                  <div class="icon"><i class="fa-solid fa-share-nodes"></i></div>
+                  <div>
+                      <h3>Gestion des réseaux sociaux</h3>
+                      <p class="muted">Stratégie, publication et suivi pour développer votre présence et votre communauté.</p>
+                  </div>
+                  </div>
+              </article>
+
+              <article class="card">
+                <div style="display:flex;gap:12px;align-items:center">
+                  <div class="icon"><i class="fa-solid fa-print"></i></div>
+                  <div>
+                    <h3>Création & Impression</h3>
+                    <p class="muted">Conception graphique et impression de supports publicitaires : flyers, affiches, cartes de visite, brochures.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div style="display:flex;gap:12px;align-items:center">
+                  <div class="icon"><i class="fa-solid fa-palette"></i></div>
+                  <div>
+                    <h3>Identité visuelle</h3>
+                    <p class="muted">Création de logo, charte graphique et supports visuels.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div style="display:flex;gap:12px;align-items:center">
+                  <div class="icon"><i class="fa-solid fa-calendar-check"></i></div>
+                  <div>
+                    <h3>Organisation événementielle</h3>
+                    <p class="muted">Planification et coordination d’événements pour vos marques.</p>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- REALISATIONS / LA FABRIK -->
+    <section id="lafabrik">
+      <div class="container">
+        <h2>Nos Réalisations</h2>
+        <div class="portfolio-grid" style="margin-top:12px">
+          <div class="portfolio-item" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop')">
+            <div class="overlay"><div><strong>Site e‑commerce</strong><div class="muted">Le Mall</div></div></div>
+          </div>
+          <div class="portfolio-item" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop')">
+            <div class="overlay"><div><strong>Identité visuelle</strong><div class="muted">DK Boutique de mode</div></div></div>
+          </div>
+          <div class="portfolio-item" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop')">
+            <div class="overlay"><div><strong>Campagne social</strong><div class="muted">AFG Consulting</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / NEWSLETTER -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contactez‑nous</h2>
+        <div class="contact-grid" style="margin-top:12px">
+          <div>
+            <form onsubmit="event.preventDefault();alert('Message envoyé (demo)')">
+              <input type="text" name="name" placeholder="Nom" required>
+              <input type="email" name="email" placeholder="Email" required style="margin-top:8px">
+              <textarea name="message" rows="5" placeholder="Votre message" style="margin-top:8px"></textarea>
+              <button class="btn submit" type="submit">Envoyer</button>
+            </form>
+            <div style="margin-top:18px" class="card">
+              <h3>Newsletter</h3>
+              <p class="muted">Abonnez‑vous pour recevoir nos conseils et offres.</p>
+              <form onsubmit="event.preventDefault();alert('Inscription newsletter (demo)')" style="margin-top:8px">
+                <input type="email" placeholder="Votre email" required>
+                <button class="btn" type="submit" style="margin-top:8px">S'abonner</button>
+              </form>
+            </div>
+          </div>
+          <aside class="card">
+            <h3>Infos</h3>
+            <p class="muted">Email: contact@digitempreinte.com<br>Téléphone: +225 07 05 73 33 98</p>
+            <div style="margin-top:12px"><strong>Heures</strong><div class="muted">Lun‑Ven 9h‑17h</div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section id="clients">
+      <div class="container">
+        <h2>Ils nous font confiance</h2>
+        <div class="clients">
+          <div class="client-img">
+            <img src="images/athen.PNG" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/ccc.PNG" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/cleanco.PNG" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/club.PNG" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/lbc.PNG" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/coconut.jpg" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/dbk.jpeg" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/dk.jpg" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/kamonarde.jpg" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/tatou.PNG" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/wec.PNG" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/klaman.png" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/2ma.PNG" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/lemall.png" alt="Brand A">
+          </div>
+          <div class="client-img">
+            <img src="images/tripora.png" alt="Brand A">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Mon Agence" style="width:100px;height:auto;border-radius:8px;object-fit:cover">
+      </div>
+      <div class="muted">© <span id="year"></span> DigitEmpreinte. Tous droits réservés.</div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a href="#" class="muted"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="muted"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="muted"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

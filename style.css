@@ -1,0 +1,416 @@
+/* style.css — Thème noir & blanc, performant, accessible */
+:root{
+  --white:#ffffff;
+  --black:#000000;
+  --muted:#9aa0a6; /* gris moyen */
+  --glass:rgba(255,255,255,0.03);
+  --accent:#ffffff; /* pour rappel, tout en blanc/noir */
+  --radius:10px;
+  --maxw:1200px;
+  --pad:10px;
+  --shadow: 0 6px 14px rgba(0,0,0,0.35);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Reset minimal et performant */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--black);color:var(--white);-webkit-font-smoothing:antialiased;line-height:1.4}
+img{max-width:100%;display:block;height:auto}
+a{text-decoration:none;color:inherit}
+
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* Typo */
+h1,h2,h3{margin:0;color:var(--white);font-weight:600}
+h1{font-size:2rem}
+h2{font-size:1.125rem}
+
+/* Header */
+header{position:sticky;top:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--white)}
+.logo{width:44px;height:44px;border-radius:8px;background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--black)}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+nav a{color:var(--muted);font-weight:600}
+nav a:focus, nav a:hover{color:var(--white);outline:none}
+.cta {display: flex;}
+.btn{background:var(--white);color:var(--black);padding:8px 14px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+.btn:focus{outline:2px solid var(--white);outline-offset:2px}
+
+.hamburger{display:none;background:none;border:0;color:var(--muted);font-size:20px;cursor:pointer}
+.mobile-nav{display:none}
+
+/* Hero */
+.hero{padding:50px 0;border-radius:12px;margin:22px 0;background-color:#0b0b0b;margin-top:0}
+.hero-inner{display:flex;gap:24px;align-items:center;padding:40px}
+.hero p{color:var(--muted);max-width:680px}
+
+/* Grid / Sections */
+section{padding:40px 0}
+.about{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#0b0b0b;padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.card p{color:var(--muted);font-size:14px}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.portfolio-item{height:160px;border-radius:10px;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.6));display:flex;align-items:flex-end;padding:10px}
+
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:16px}
+form input, form textarea{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--white)}
+
+.clients{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.client{background:rgba(255,255,255,0.03);padding:14px;border-radius:10px;min-width:100px;text-align:center;color:var(--muted)}
+
+footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+/* Accessibility and interaction improvements */
+:focus{outline:none}
+[tabindex]:focus{outline:2px solid var(--white);outline-offset:3px}
+
+/* Performance: limit transforms, use will-change where beneficial */
+.card, .hero-inner, .portfolio-item{will-change:transform,opacity}
+
+/* Small utilities */
+.muted{color:var(--muted)}
+.icon{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.03);font-size:18px;color:var(--white)}
+/* Minimal print rule */
+@media print{header,footer,form{display:none}body{color:#000;background:#fff}}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+.client {
+  text-align: center;
+}
+.client-img {
+  width: 60px; /* ajustable selon besoin */
+  height: 60px;
+  background: #ffffff; /* fond blanc */
+  border-radius: 8px;  /* coins arrondis */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px; /* espace entre l'image et le cadre */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.client-img img {
+  width: 100px;   /* ajustable */
+  height: 100px;  /* ajustable */
+  object-fit: contain;
+}
+
+.service-card {
+  display: block;
+  background: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Hero Service */
+.hero-service {
+  position: relative;
+  background: url("images/font.jpg") center/cover no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-service .hero-content {
+  color: #fff;
+  padding: 0px;
+  max-width: 800px;
+}
+
+.hero-service .hero-content h1 {
+  font-size: 1.5rem;
+  margin: 0px 0;
+  font-weight: 500;
+}
+
+.hero-service .hero-content p {
+  font-size: 1rem;
+  color: #ddd;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+.hero-service .hero-content img {
+  width: 100px;
+  height: auto;
+  margin: auto;
+}
+
+.service-details {
+  padding: 60px 20px;
+}
+
+.service-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.service-details p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #AAA;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.service-features li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-features i {
+  color: #FFF;
+}
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-card img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 0px 15px;
+  margin-top: 0;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.card-content strong {
+  color: #000;
+}
+
+/* Hero content icons */
+.hero-content i{
+  font-size: 20px;
+  color: #FFF;
+}
+
+/* Contact items */
+.contact-item {
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.contact-item h3 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.contact-item p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #000;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #25A63C;
+}
+
+/* Formulaire */
+.contact-form {
+  padding: 60px 20px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button.btn {
+  width: fit-content;
+  align-self: center;
+  padding: 12px 30px;
+  font-weight: bold;
+}
+
+/* Select style */
+form select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #000;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  color: #FFF;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form select:focus {
+  outline: none;
+  border-color: #25A63C;
+  box-shadow: 0 0 5px rgba(37, 166, 60, 0.5);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "\f078"; /* icône Font Awesome flèche bas */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+/* Responsive */
+@media (max-width:900px){
+  .container{padding:0 20px;} /* padding normal */
+  .about{grid-template-columns:1fr}
+  .hero-inner{flex-direction:column;align-items:flex-start;padding:24px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:768px){
+  .container{padding:0 5px;} /* padding normal pour tout le site */
+  form select { font-size:0.95rem; padding:10px 12px; }
+  .select-wrapper::after { font-size:0.8rem; }
+  .contact-grid { grid-template-columns:1fr; gap:20px; }
+  .cards-grid { grid-template-columns:1fr; gap:20px; }
+  .hero-service { height:50vh; }
+  .hero-content h1 { font-size:1.8rem; }
+  .hero-content p { font-size:1rem; }
+}
+
+@media (max-width:700px){
+  nav ul{display:none}
+  .hamburger{display:block}
+  .mobile-nav{display:none;background:#070707;position:absolute;right:16px;top:80px;padding:12px;box-shadow:0 8px 24px rgba(0,0,0,0.6)}
+  .mobile-nav a{display:block;padding:8px 12px;color:var(--muted)}
+  .hero-inner{padding:18px}
+  .services-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:1fr}
+
+  /* --- CORRECTION HEADER PETIT ÉCRAN --- */
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .nav .brand{flex:1;}
+  .btn{margin-left:10px; flex-shrink:0;}
+  .hamburger{margin-left:10px; flex-shrink:0;}
+}
+
+
+/* Motion preference */
+@media (prefers-reduced-motion: reduce){
+  * {transition:none!important;animation:none!important}
+}

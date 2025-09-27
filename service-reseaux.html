@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DigitEmpreinte</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- HTML Header portion avec logo image -->
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="Logo Mon Agence" style="width:100px;height:auto;border-radius:8px;object-fit:cover">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta">
+      <button class="btn" onclick="location.href='#contact'">Demander un devis</button>
+      <button class="hamburger" id="hambBtn" aria-label="menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-nav container" id="mobileNav">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a>
+    <a href="services.html"><i class="fa-solid fa-gear"></i> Services</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+  </div>
+</header>
+
+    <!-- Hero section -->
+    <section class="hero-service">
+        <div class="hero-content">
+            <img src="images/logoderive.png" alt="logoderive">
+            <h1>Gestion des réseaux sociaux</h1>
+            <p>Stratégie, publication et suivi pour développer votre présence en ligne et engager votre communauté.</p>
+        </div>
+    </section>
+
+  <!-- Détails du service -->
+  <main class="container">
+    <section class="service-details">
+      <div class="container">
+        <h2>Pourquoi confier la gestion de vos réseaux sociaux à des pros ?</h2>
+        <p>
+          Les réseaux sociaux sont devenus essentiels pour toucher vos clients et renforcer votre image de marque.
+          Nous vous aidons à définir une stratégie adaptée, à produire du contenu impactant et à interagir avec votre audience.
+        </p>
+
+        <ul class="service-features">
+          <li><i class="fa-solid fa-lightbulb"></i> Stratégie social media adaptée</li>
+          <li><i class="fa-solid fa-pen-nib"></i> Création de contenus engageants</li>
+          <li><i class="fa-solid fa-calendar-days"></i> Planification et programmation des posts</li>
+          <li><i class="fa-solid fa-comments"></i> Animation et modération de communauté</li>
+          <li><i class="fa-solid fa-chart-line"></i> Suivi des performances et reporting</li>
+        </ul>
+
+        <a href="contact.html" class="btn">Demander un devis</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Mon Agence" style="width:100px;height:auto;border-radius:8px;object-fit:cover">
+      </div>
+      <div class="muted">© <span id="year"></span> DigitEmpreinte. Tous droits réservés.</div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a href="#" class="muted"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="muted"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="muted"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

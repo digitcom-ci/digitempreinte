@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DigitEmpreinte</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- HTML Header portion avec logo image -->
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="images/logo.png" alt="Logo Mon Agence" style="width:100px;height:auto;border-radius:8px;object-fit:cover">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta">
+      <button class="btn" onclick="location.href='#contact'">Demander un devis</button>
+      <button class="hamburger" id="hambBtn" aria-label="menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="mobile-nav container" id="mobileNav">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a>
+    <a href="services.html"><i class="fa-solid fa-gear"></i> Services</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+  </div>
+</header>
+
+<section class="contact-form" id="form-devis">
+  <div class="container">
+    <h2>Demander un devis</h2>
+    <form action="mailto:contact@lafabrik.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required>
+      </div>
+
+        <div class="form-group select-wrapper">
+        <label for="service">Service souhaité</label>
+        <select id="service" name="service" required>
+            <option value="">-- Sélectionnez un service --</option>
+            <option value="Création de site web">Création de site web</option>
+            <option value="Création de contenu">Création de contenu</option>
+            <option value="Gestion des réseaux sociaux">Gestion des réseaux sociaux</option>
+            <option value="Création & Impression">Création & Impression</option>
+            <option value="Identité visuelle">Identité visuelle</option>
+            <option value="Organisation événementielle">Organisation événementielle</option>
+        </select>
+        </div>
+
+      <div class="form-group">
+        <label for="details">Détails / Message</label>
+        <textarea id="details" name="details" rows="5" placeholder="Décrivez votre projet" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Envoyer la demande</button>
+    </form>
+  </div>
+</section>
+ <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Mon Agence" style="width:100px;height:auto;border-radius:8px;object-fit:cover">
+      </div>
+      <div class="muted">© <span id="year"></span> DigitEmpreinte. Tous droits réservés.</div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a href="#" class="muted"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="muted"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="muted"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
